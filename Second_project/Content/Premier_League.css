@@ -1,0 +1,85 @@
+﻿body {
+    padding-top: 0px;
+    padding-bottom: 20px;
+    background-color: #428bca;
+    color: #eeecef;
+}
+
+.heading {
+    text-align: center;
+    font-size: 40px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.btn-default {
+    color: black;
+    background-color: #466289;  /*#babcc7*/
+    border-color: #ccc;
+}
+
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: black;
+}
+
+.form-horizontal .control-label {
+    /*color:#093a65;*/
+    color: black;
+}
+
+.h2 {
+    color:black;
+}
+
+.table {
+    background-color: steelblue;
+    color: #fff;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1170px;
+}
+
+.table-header {
+    background-color: #466289;
+    color: #fff;
+}
+
+.heading-container {
+    padding: 0;
+    background: #466289;
+   
+}
+
+.container {
+    max-width: 1170px;
+    margin-right: auto;
+    margin-left: auto;
+    padding:0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.navbar-inverse {
+    background-color: #babcc7;
+    border-color: #babcc7;
+}
+
+.search {
+    font-weight: 800;
+    font-size: 14px;
+}
+.profile {
+    padding: 20px;
+    background-color: #466289;
+    color: #fff;
+    box-shadow: 10px 10px 5px grey;
+}
+
+.container {
+
+}
+   
+
+
+

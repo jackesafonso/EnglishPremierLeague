@@ -1,0 +1,56 @@
+﻿@model Second_project.Models.TablePremierLeague1
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+
+    @*<h4>Player Profile</h4>*@
+    <hr />
+    
+
+@using (Html.BeginForm())
+{
+    
+<div>
+        <img src="@Url.Content(Model.Picture)" height="200" />
+        <h4>Are you sure you want to delete this player?</h4>
+        <hr />
+
+    @*<dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Name):
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+    </dl>*@
+    <ul class="list-inline">
+        <li style="font-weight:bold;">Name:</li>
+        @Html.DisplayFor(model => model.Name)
+    </ul>
+
+
+
+
+     <ul class="list-inline">
+         <li style="font-weight:bold;">Added by:</li>
+         @Html.DisplayFor(model => model.UserName)
+     </ul>
+
+           
+
+    
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" />
+            @Html.ActionLink("Cancel", "Index", null, new { @class = "btn btn-default" })
+        </div>
+
+</div>
+}
+
+

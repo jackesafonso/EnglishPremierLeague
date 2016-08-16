@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Premier_League1Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="TablePremierLeague1">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Picture" Type="text" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="PreviousClub" Type="nvarchar" MaxLength="50" />
+    <Property Name="CurrentClub" Type="nvarchar" MaxLength="50" />
+    <Property Name="Age" Type="int" />
+    <Property Name="Position" Type="nvarchar" MaxLength="50" />
+    <Property Name="MarketValue" Type="nvarchar" MaxLength="50" />
+    <Property Name="Nationality" Type="nvarchar" MaxLength="50" />
+    <Property Name="Likes" Type="int" />
+    <Property Name="Dislikes" Type="int" />
+    <Property Name="Information" Type="nvarchar(max)" />
+    <Property Name="InternationalMatches" Type="int" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Premier_League1ModelStoreContainer">
+    <EntitySet Name="TablePremierLeague1" EntityType="Self.TablePremierLeague1" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

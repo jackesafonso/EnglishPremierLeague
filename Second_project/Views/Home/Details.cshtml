@@ -1,0 +1,119 @@
+﻿@model Second_project.Models.TablePremierLeague1
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Player Profile</h2>
+
+
+<div class="container profile">
+    @*<h4>Player Profile</h4>*@
+    <hr />
+
+    @*@using (Html.BeginForm())
+    {*@
+
+        <div class="col-md-2">
+
+            <img src="@Url.Content(Model.Picture)" height="200" />
+            <br/>
+          
+            <hr />
+
+        </div>
+        <div class="col-md-10">
+            <dl class="dl-horizontal">
+
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Name):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Name)<br/><br/>
+                </dd>
+                <dt>
+                    Info:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Information)<br /><br />
+                </dd>
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.PreviousClub)*@
+                    Previous Club:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.PreviousClub)<br /><br />
+                </dd>
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.CurrentClub)*@
+                    Current Club:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.CurrentClub)<br /><br />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Age):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Age)<br /><br />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Position):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Position)<br /><br />
+                </dd>
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.MarketValue)*@
+                    Market Value:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.MarketValue)<br /><br />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Nationality):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Nationality)<br /><br />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Likes):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Likes)<br /><br />
+                </dd>
+                <dt>
+                    @Html.DisplayNameFor(model => model.Dislikes):
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.Dislikes)<br /><br />
+                </dd>
+
+               
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.InternationalMatches):*@
+                    International Matches:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.InternationalMatches)<br /><br />
+                </dd>
+                <dt>
+                    @*@Html.DisplayNameFor(model => model.UserName):*@
+                    Added by:
+                </dt>
+                <dd>
+                    @Html.DisplayFor(model => model.UserName)<br /><br />
+                </dd>
+            </dl>
+
+            <p>
+                @*@Html.ActionLink("Edit", "Edit", new { id = Model.id }) |*@
+                @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+            </p>
+
+        </div>
+
+</div>
+
+

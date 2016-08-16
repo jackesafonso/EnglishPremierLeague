@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Premier_League1ModelStoreContainer" CdmEntityContainer="Premier_League1Entities">
+    <EntitySetMapping Name="TablePremierLeague1">
+      <EntityTypeMapping TypeName="Premier_League1Model.TablePremierLeague1">
+        <MappingFragment StoreEntitySet="TablePremierLeague1">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="Picture" ColumnName="Picture" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="PreviousClub" ColumnName="PreviousClub" />
+          <ScalarProperty Name="CurrentClub" ColumnName="CurrentClub" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="MarketValue" ColumnName="MarketValue" />
+          <ScalarProperty Name="Nationality" ColumnName="Nationality" />
+          <ScalarProperty Name="Likes" ColumnName="Likes" />
+          <ScalarProperty Name="Dislikes" ColumnName="Dislikes" />
+          <ScalarProperty Name="Information" ColumnName="Information" />
+          <ScalarProperty Name="InternationalMatches" ColumnName="InternationalMatches" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

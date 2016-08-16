@@ -1,0 +1,150 @@
+﻿@*use IEnumerable so that we can use a foreach loop*@
+@model IEnumerable<Second_project.Models.TablePremierLeague1>
+
+
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div class="container heading-container">
+    <div class="heading">English Premier League Transfer Window</div>
+</div>
+
+
+<hr/>
+
+@Html.ActionLink("Add new player", "Create", null, new { @class = "btn btn-default" })
+
+<br/>
+<br/>
+
+@using (Html.BeginForm())
+{
+    <p>
+        Player Position: @Html.DropDownList("playerPosition", "All")
+        @*searchString was used as parameter for the dropdownbox in HomeControler*@
+        Name: @Html.TextBox("SearchString")
+        <input type="submit" value="Search" class="btn btn-default" />
+    </p>
+}
+<br />
+
+<hr />
+
+<table class="table">
+    <tr class="table-header">
+        @*Display table header*@
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Picture)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th class="text-center">
+            @*@Html.DisplayNameFor(model => model.PreviousClub)*@
+            Previous Club
+        </th>
+        <th class="text-center">
+            @*@Html.DisplayNameFor(model => model.CurrentClub)*@
+            Current Club
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Age)
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th class="text-center">
+            @*@Html.DisplayNameFor(model => model.MarketValue)*@
+            Market Value
+        </th>
+        <th class="text-center">
+            @Html.DisplayNameFor(model => model.Nationality)
+        </th>
+        <th class="text-center">
+            Ratings
+        </th>
+        <th class="text-center">
+            Rate the Player
+        </th>
+        <th class="text-center">
+            Actions
+        </th>
+    </tr>
+    
+    @foreach (var item in Model)
+    { 
+
+    //Display a row of data from db
+        <tr>
+            <td class="text-center">
+                <img src="@Url.Content(item.Picture)" height="100" width="100" />
+            </td>
+
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td class="text-center">
+
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.PreviousClub)
+            </td>
+
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.CurrentClub)
+            </td>
+
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+
+           <td class="text-center">
+                @Html.DisplayFor(modelItem => item.MarketValue)
+               
+            </td>
+
+            <td class="text-center">
+                @Html.DisplayFor(modelItem => item.Nationality)
+            </td>
+
+            <td class="text-center">
+                <i class="icon-thumbs-up"></i>
+                @Html.DisplayFor(modelItem => item.Likes)
+                <span style="padding: 0 10px;"></span>
+                <i class="icon-thumbs-down"></i>
+                @Html.DisplayFor(modelItem => item.Dislikes)
+            </td>
+
+            <td class="text-center">
+                <ul class="list-inline">
+                    @Html.ActionLink("Like", "Like", new { item.id }, new { @class = "btn btn-success" })
+                    @Html.ActionLink("Dislike", "Dislike", new { item.id }, new { @class = "btn btn-danger" })
+                </ul>
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.id }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Details", "Details", new { id = item.id }, new { @class = "btn btn-default" })
+                @Html.ActionLink("Delete", "Delete", new { id = item.id }, new { @class = "btn btn-default" })
+            </td>
+            
+              <td class="text-center" style="display:none;">
+                @Html.DisplayFor(modelItem => item.Information)
+              </td>
+              <td class="text-center" style="display:none;">
+                @Html.DisplayFor(modelItem => item.InternationalMatches)
+              </td>
+              <td class="text-center" style="display:none;">
+                @Html.DisplayFor(modelItem => item.UserName)
+              </td>
+           
+
+        </tr>
+    }
+</table>
+
+
